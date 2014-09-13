@@ -7,28 +7,50 @@
         <!--DVDs-->
         <scene sceneID="nDE-TX-MQS">
             <objects>
-                <viewController id="oWZ-8o-H9D" sceneMemberID="viewController">
+                <viewController id="oWZ-8o-H9D" customClass="TopRentalsViewController" customModule="ios8_rotten_tomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baF-Bm-fyt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gxN-Ph-uZ2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="DVDs" id="cgm-Ol-bPM"/>
+                    <connections>
+                        <outlet property="tableView" destination="gxN-Ph-uZ2" id="azc-gc-Bn3"/>
+                        <segue destination="gy7-K8-51J" kind="push" identifier="MovieFromTopRentals" id="9xv-Fr-Z2s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EDK-9Z-gLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="899" y="257"/>
+            <point key="canvasLocation" x="898" y="257"/>
         </scene>
         <!--Movies-->
         <scene sceneID="aW9-zp-WHc">
             <objects>
-                <viewController id="Rgu-TM-P5R" sceneMemberID="viewController">
+                <viewController id="Rgu-TM-P5R" customClass="BoxOfficeViewController" customModule="ios8_rotten_tomatoes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UnQ-dH-7aa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="h0i-mQ-sRW">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="yIx-8w-28O"/>
+                    <connections>
+                        <outlet property="tableView" destination="h0i-mQ-sRW" id="l0Q-7s-6YY"/>
+                        <segue destination="gy7-K8-51J" kind="push" identifier="MovieFromBoxOffice" id="Ja9-Wt-Hof"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ejm-z4-fkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,6 +94,21 @@
             </objects>
             <point key="canvasLocation" x="366" y="-369"/>
         </scene>
+        <!--Movie View Controller-->
+        <scene sceneID="ezS-Zm-i5v">
+            <objects>
+                <viewController id="gy7-K8-51J" customClass="MovieViewController" customModule="ios8_rotten_tomatoes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mt-Ob-XfU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="q2R-dZ-OfW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8p-JN-xHO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="-55"/>
+        </scene>
         <!--DVDs-->
         <scene sceneID="WLH-9v-d8p">
             <objects>
@@ -97,4 +134,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="9xv-Fr-Z2s"/>
+    </inferredMetricsTieBreakers>
 </document>
