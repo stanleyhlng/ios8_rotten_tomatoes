@@ -97,7 +97,9 @@
 		2077F43A19C2EEFC00689887 /* ios8_rotten_tomatoes */ = {
 			isa = PBXGroup;
 			children = (
+				2089C64919C414C500DEB01D /* Clients */,
 				20CF5F6B19C4003400B0E05C /* Controllers */,
+				2089C64B19C415B800DEB01D /* Models */,
 				2077F43D19C2EEFC00689887 /* AppDelegate.swift */,
 				2077F43F19C2EEFC00689887 /* ViewController.swift */,
 				2077F44119C2EEFC00689887 /* Main.storyboard */,
@@ -137,6 +139,36 @@
 			isa = PBXGroup;
 			children = (
 				2089C64719C4112600DEB01D /* MovieViewController.swift */,
+			);
+			name = Movie;
+			sourceTree = "<group>";
+		};
+		2089C64919C414C500DEB01D /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				2089C64A19C414CF00DEB01D /* RottenTomatoes */,
+			);
+			name = Clients;
+			sourceTree = "<group>";
+		};
+		2089C64A19C414CF00DEB01D /* RottenTomatoes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = RottenTomatoes;
+			sourceTree = "<group>";
+		};
+		2089C64B19C415B800DEB01D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2089C64C19C415CD00DEB01D /* Movie */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2089C64C19C415CD00DEB01D /* Movie */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Movie;
 			sourceTree = "<group>";
