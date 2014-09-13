@@ -43,6 +43,7 @@
 		2077F45319C2EEFC00689887 /* ios8_rotten_tomatoesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ios8_rotten_tomatoesTests.swift; sourceTree = "<group>"; };
 		2089C64719C4112600DEB01D /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		2089C64D19C419F900DEB01D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2089C64F19C43AC300DEB01D /* ios8_rotten_tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios8_rotten_tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
 		20CF5F7119C4011A00B0E05C /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 		20CF5F7319C4012600B0E05C /* TopRentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRentalsViewController.swift; sourceTree = "<group>"; };
 		7824E268ACFD49089B70CB8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +109,7 @@
 				2077F44419C2EEFC00689887 /* Images.xcassets */,
 				2077F44619C2EEFC00689887 /* LaunchScreen.xib */,
 				2077F43B19C2EEFC00689887 /* Supporting Files */,
+				2089C64F19C43AC300DEB01D /* ios8_rotten_tomatoes-Bridging-Header.h */,
 			);
 			path = ios8_rotten_tomatoes;
 			sourceTree = "<group>";
@@ -466,9 +468,12 @@
 			baseConfigurationReference = E9371ADC211E4E54BAB8FEA9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ios8_rotten_tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios8_rotten_tomatoes/ios8_rotten_tomatoes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -477,9 +482,11 @@
 			baseConfigurationReference = E9371ADC211E4E54BAB8FEA9 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = ios8_rotten_tomatoes/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ios8_rotten_tomatoes/ios8_rotten_tomatoes-Bridging-Header.h";
 			};
 			name = Release;
 		};

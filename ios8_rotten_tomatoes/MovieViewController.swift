@@ -14,6 +14,7 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
     var movie: Movie!
     
     override func viewDidLoad() {
@@ -28,12 +29,12 @@ class MovieViewController: UIViewController {
             // nav.title
             //navigationItem.title = movie.title
             
-            // content.title
+            // movie.title
             titleLabel.text = movie.title
             titleLabel.sizeToFit()
             println("titleLabel.frame.size = \(titleLabel.frame.size)")
             
-            // content.synopsis
+            // movie.synopsis
             synopsisLabel.text = movie.synopsis
             synopsisLabel.sizeToFit()
             synopsisLabel.frame.origin.y = titleLabel.frame.origin.y
@@ -44,6 +45,22 @@ class MovieViewController: UIViewController {
             // content
             contentView.sizeToFit()
             println("contentView.frame.size = \(contentView.frame.size)")
+            
+            // movie.poster
+            var posters = [
+                "lo_res": NSURL(string: movie.posters["profile"]!),
+                "hi_res": NSURL(string: movie.posters["original"]!)
+                ]
+            //posterImageView.setImageWithURL(posters["lo_res"])
+            //posterImageView.setImageWithURLRequest(NSURLRequest(URL: posters["lo_res"]!), placeholderImage: UIImage(named: "movie-image-placeholder"), success: , failure: nil)
+            posterImageView.setImageWithURLRequest(NSURLRequest(URL: posters["lo_res"]!), placeholderImage: UIImage(named: "movie-image-placeholder"), success: { (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
+                
+                println("success")
+                self.posterImageView.image = image!
+                
+                }, failure: { (request: NSURLRequest!, response: NSHTTPURLResponse!, error: NSError!) -> Void in
+                println("fail")
+            })
         }
 
         // current screen size

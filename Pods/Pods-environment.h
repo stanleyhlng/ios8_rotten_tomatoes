@@ -60,17 +60,17 @@
 #define COCOAPODS_VERSION_MINOR_GSProgressHUD 3
 #define COCOAPODS_VERSION_PATCH_GSProgressHUD 0
 
+// M13ProgressSuite
+#define COCOAPODS_POD_AVAILABLE_M13ProgressSuite
+#define COCOAPODS_VERSION_MAJOR_M13ProgressSuite 1
+#define COCOAPODS_VERSION_MINOR_M13ProgressSuite 2
+#define COCOAPODS_VERSION_PATCH_M13ProgressSuite 5
+
 // Reveal-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 1
 #define COCOAPODS_VERSION_MINOR_Reveal_iOS_SDK 0
 #define COCOAPODS_VERSION_PATCH_Reveal_iOS_SDK 4
-
-// SDWebImage
-#define COCOAPODS_POD_AVAILABLE_SDWebImage
-#define COCOAPODS_VERSION_MAJOR_SDWebImage 3
-#define COCOAPODS_VERSION_MINOR_SDWebImage 7
-#define COCOAPODS_VERSION_PATCH_SDWebImage 1
 
 // SDWebImage/Core
 #define COCOAPODS_POD_AVAILABLE_SDWebImage_Core
@@ -78,9 +78,63 @@
 #define COCOAPODS_VERSION_MINOR_SDWebImage_Core 7
 #define COCOAPODS_VERSION_PATCH_SDWebImage_Core 1
 
-// UIActivityIndicator-for-SDWebImage
-#define COCOAPODS_POD_AVAILABLE_UIActivityIndicator_for_SDWebImage
-#define COCOAPODS_VERSION_MAJOR_UIActivityIndicator_for_SDWebImage 1
-#define COCOAPODS_VERSION_MINOR_UIActivityIndicator_for_SDWebImage 2
-#define COCOAPODS_VERSION_PATCH_UIActivityIndicator_for_SDWebImage 0
+// SDWebImage/WebP
+#define COCOAPODS_POD_AVAILABLE_SDWebImage_WebP
+#define COCOAPODS_VERSION_MAJOR_SDWebImage_WebP 3
+#define COCOAPODS_VERSION_MINOR_SDWebImage_WebP 7
+#define COCOAPODS_VERSION_PATCH_SDWebImage_WebP 1
+
+// UIImageView+SDWebImage_M13ProgressSuite
+#define COCOAPODS_POD_AVAILABLE_UIImageView_SDWebImage_M13ProgressSuite
+#define COCOAPODS_VERSION_MAJOR_UIImageView_SDWebImage_M13ProgressSuite 0
+#define COCOAPODS_VERSION_MINOR_UIImageView_SDWebImage_M13ProgressSuite 1
+#define COCOAPODS_VERSION_PATCH_UIImageView_SDWebImage_M13ProgressSuite 1
+
+// libwebp
+#define COCOAPODS_POD_AVAILABLE_libwebp
+#define COCOAPODS_VERSION_MAJOR_libwebp 0
+#define COCOAPODS_VERSION_MINOR_libwebp 4
+#define COCOAPODS_VERSION_PATCH_libwebp 1
+
+// libwebp/dec
+#define COCOAPODS_POD_AVAILABLE_libwebp_dec
+#define COCOAPODS_VERSION_MAJOR_libwebp_dec 0
+#define COCOAPODS_VERSION_MINOR_libwebp_dec 4
+#define COCOAPODS_VERSION_PATCH_libwebp_dec 1
+
+// libwebp/demux
+#define COCOAPODS_POD_AVAILABLE_libwebp_demux
+#define COCOAPODS_VERSION_MAJOR_libwebp_demux 0
+#define COCOAPODS_VERSION_MINOR_libwebp_demux 4
+#define COCOAPODS_VERSION_PATCH_libwebp_demux 1
+
+// libwebp/dsp
+#define COCOAPODS_POD_AVAILABLE_libwebp_dsp
+#define COCOAPODS_VERSION_MAJOR_libwebp_dsp 0
+#define COCOAPODS_VERSION_MINOR_libwebp_dsp 4
+#define COCOAPODS_VERSION_PATCH_libwebp_dsp 1
+
+// libwebp/enc
+#define COCOAPODS_POD_AVAILABLE_libwebp_enc
+#define COCOAPODS_VERSION_MAJOR_libwebp_enc 0
+#define COCOAPODS_VERSION_MINOR_libwebp_enc 4
+#define COCOAPODS_VERSION_PATCH_libwebp_enc 1
+
+// libwebp/mux
+#define COCOAPODS_POD_AVAILABLE_libwebp_mux
+#define COCOAPODS_VERSION_MAJOR_libwebp_mux 0
+#define COCOAPODS_VERSION_MINOR_libwebp_mux 4
+#define COCOAPODS_VERSION_PATCH_libwebp_mux 1
+
+// libwebp/utils
+#define COCOAPODS_POD_AVAILABLE_libwebp_utils
+#define COCOAPODS_VERSION_MAJOR_libwebp_utils 0
+#define COCOAPODS_VERSION_MINOR_libwebp_utils 4
+#define COCOAPODS_VERSION_PATCH_libwebp_utils 1
+
+// libwebp/webp
+#define COCOAPODS_POD_AVAILABLE_libwebp_webp
+#define COCOAPODS_VERSION_MAJOR_libwebp_webp 0
+#define COCOAPODS_VERSION_MINOR_libwebp_webp 4
+#define COCOAPODS_VERSION_PATCH_libwebp_webp 1
 
