@@ -9,12 +9,20 @@
 import UIKit
 
 class MovieViewController: UIViewController {
-
+    
+    var movie: Movie!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         println("MovieViewController - viewDidLoad")
+        dump(movie);
+        
+        // nav title
+        if movie != nil {
+            self.navigationItem.title = movie.title
+        }
     }
 
     override func didReceiveMemoryWarning() {
