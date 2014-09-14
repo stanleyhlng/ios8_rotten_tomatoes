@@ -34,7 +34,7 @@ class TopRentalsViewController: UIViewController, UITableViewDataSource, UITable
         // setup rotten tomatoes client
         GSProgressHUD.show()
         var client = RottenTomatoesClient()
-        var params = ["limit": "10"]
+        var params = ["limit": "50"]
         client.topRentalsWithParams(params,
             success: { (operation, response) -> Void in
                 self.movies = response as [Movie]
@@ -56,7 +56,7 @@ class TopRentalsViewController: UIViewController, UITableViewDataSource, UITable
     func doRefresh(sender: AnyObject) {
         println("TopRentalsViewController - doRefresh")
         var client = RottenTomatoesClient()
-        var params = ["limit": "10"]
+        var params = ["limit": "50"]
         client.topRentalsWithParams(params,
             success: { (operation, response) -> Void in
                 self.movies = response as [Movie]

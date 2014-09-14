@@ -19,32 +19,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-M13ProgressSuite.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Mantle.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Reveal-iOS-SDK.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-UIImageView+SDWebImage_M13ProgressSuite.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-libwebp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,52 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1003006032B84DF6ACAFD657</key>
+		<key>08EA97025B8749839E5B2E1E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1995045AAA744FBD859A91D4</key>
+		<key>7ED3DA28A1A14843939AE46E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2F811939876545D685C86D41</key>
+		<key>BDAA01276DAD44FDA33FA84C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>30B6608560144077805D57B7</key>
+		<key>E08EAB5847944B3D94FE60E0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82F5E70E882343A89525DE8D</key>
+		<key>E57F7A2AA6154EBBB0697190</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A2FDACBF6EE3429585860716</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AFFC90C8764D40C58D1E3E11</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BC034541616B45ABB1A24170</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F2BA7230C38945788FAC3C82</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FDB1D5C7EB524406BB0E41DF</key>
+		<key>F446A1AAD50941738650F7F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

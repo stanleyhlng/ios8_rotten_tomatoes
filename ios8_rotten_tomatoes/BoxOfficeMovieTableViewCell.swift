@@ -48,6 +48,7 @@ class BoxOfficeMovieTableViewCell: UITableViewCell {
     }
     
     func setupPoster() {
+
         let posters = movie.posters as Dictionary<String, String>
         let url = NSURL.URLWithString(posters["profile"]!)
         let imageData: NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)

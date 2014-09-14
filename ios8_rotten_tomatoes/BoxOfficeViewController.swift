@@ -34,11 +34,13 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
         
         // setup search bar
         searchBar.delegate = self
+        searchBar.tintColor = UIColor.whiteColor()
+        searchBar.alpha = 0.8
         
         // setup rotten tomatoes client
         GSProgressHUD.show()
         var client = RottenTomatoesClient()
-        var params = ["limit": "10"]
+        var params = ["limit": "50"]
         client.boxOfficeWithParams(params,
             success: { (operation, response) -> Void in
                 self.movies = response as [Movie]
@@ -48,6 +50,7 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                UIAlertView(title: "Network error!", message: nil, delegate: self, cancelButtonTitle: "OK").show()
                 GSProgressHUD.dismiss()
         })
     }
@@ -60,7 +63,7 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
     func doRefresh(sender: AnyObject) {
         println("BoxOfficeViewController - doRefresh")
         var client = RottenTomatoesClient()
-        var params = ["limit": "10"]
+        var params = ["limit": "50"]
         client.boxOfficeWithParams(params,
             success: { (operation, response) -> Void in
                 self.movies = response as [Movie]
@@ -70,6 +73,7 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                UIAlertView(title: "Network error!", message: nil, delegate: self, cancelButtonTitle: "OK").show()
                 self.refreshControl.endRefreshing()
         })
     }
@@ -104,7 +108,13 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         println("BoxOfficeViewController - searchBarCancelButtonClicked")
         searchBar.resignFirstResponder()
+        searchBar.alpha = 0.8
         doRefresh(self)
+    }
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        searchBar.alpha = 1
+        return true
     }
     
     // MARK: - UITableViewDataSource
