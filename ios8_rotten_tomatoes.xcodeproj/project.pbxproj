@@ -16,6 +16,7 @@
 		2077F45419C2EEFC00689887 /* ios8_rotten_tomatoesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2077F45319C2EEFC00689887 /* ios8_rotten_tomatoesTests.swift */; };
 		2089C64819C4112600DEB01D /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C64719C4112600DEB01D /* MovieViewController.swift */; };
 		2089C64E19C419F900DEB01D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C64D19C419F900DEB01D /* Movie.swift */; };
+		2089C65719C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C65619C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift */; };
 		20CF5F7219C4011A00B0E05C /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF5F7119C4011A00B0E05C /* BoxOfficeViewController.swift */; };
 		20CF5F7419C4012600B0E05C /* TopRentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF5F7319C4012600B0E05C /* TopRentalsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -44,6 +45,7 @@
 		2089C64719C4112600DEB01D /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
 		2089C64D19C419F900DEB01D /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		2089C64F19C43AC300DEB01D /* ios8_rotten_tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios8_rotten_tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
+		2089C65619C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxOfficeMovieTableViewCell.swift; sourceTree = "<group>"; };
 		20CF5F7119C4011A00B0E05C /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 		20CF5F7319C4012600B0E05C /* TopRentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRentalsViewController.swift; sourceTree = "<group>"; };
 		7824E268ACFD49089B70CB8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +105,7 @@
 				2089C64919C414C500DEB01D /* Clients */,
 				20CF5F6B19C4003400B0E05C /* Controllers */,
 				2089C64B19C415B800DEB01D /* Models */,
+				2089C65219C4BF3100DEB01D /* UI */,
 				2077F43D19C2EEFC00689887 /* AppDelegate.swift */,
 				2077F43F19C2EEFC00689887 /* ViewController.swift */,
 				2077F44119C2EEFC00689887 /* Main.storyboard */,
@@ -176,6 +179,38 @@
 				2089C64D19C419F900DEB01D /* Movie.swift */,
 			);
 			name = Movie;
+			sourceTree = "<group>";
+		};
+		2089C65219C4BF3100DEB01D /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2089C65319C4BF3F00DEB01D /* Table View Cells */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		2089C65319C4BF3F00DEB01D /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2089C65419C4BF4800DEB01D /* Box Office Movie */,
+				2089C65519C4BF6500DEB01D /* Top Rentals Movie */,
+			);
+			name = "Table View Cells";
+			sourceTree = "<group>";
+		};
+		2089C65419C4BF4800DEB01D /* Box Office Movie */ = {
+			isa = PBXGroup;
+			children = (
+				2089C65619C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift */,
+			);
+			name = "Box Office Movie";
+			sourceTree = "<group>";
+		};
+		2089C65519C4BF6500DEB01D /* Top Rentals Movie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Top Rentals Movie";
 			sourceTree = "<group>";
 		};
 		20CF5F6B19C4003400B0E05C /* Controllers */ = {
@@ -340,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20CF5F7419C4012600B0E05C /* TopRentalsViewController.swift in Sources */,
+				2089C65719C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift in Sources */,
 				2089C64819C4112600DEB01D /* MovieViewController.swift in Sources */,
 				2089C64E19C419F900DEB01D /* Movie.swift in Sources */,
 				2077F44019C2EEFC00689887 /* ViewController.swift in Sources */,

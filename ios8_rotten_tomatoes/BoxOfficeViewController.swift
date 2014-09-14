@@ -22,7 +22,6 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = 100
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "com.stanleyhlng.demo.cell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +39,8 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
         println("BoxOfficeViewController - cellForRowAtIndexPath: \(indexPath.row)")
 
         //let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "")
-        let cell = tableView.dequeueReusableCellWithIdentifier("com.stanleyhlng.demo.cell") as UITableViewCell
-        cell.textLabel?.text = "Hello" as NSString
+        let cell = tableView.dequeueReusableCellWithIdentifier("BoxOfficeMovieCell") as BoxOfficeMovieTableViewCell
+        cell.titleLabel?.text = "1Hello" as NSString
         return cell
     }
 
