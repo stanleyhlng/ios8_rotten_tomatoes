@@ -54,7 +54,7 @@ class BoxOfficeMovieTableViewCell: UITableViewCell {
         
         posterImageView.alpha = 0
         posterImageView.image = UIImage(data: imageData)
-        UIView.animateWithDuration(1.0, animations: { () -> Void in
+        UIView.animateWithDuration(0.4, animations: { () -> Void in
             self.posterImageView.alpha = 1
         })
     }
