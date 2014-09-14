@@ -18,6 +18,7 @@
 		2089C64E19C419F900DEB01D /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C64D19C419F900DEB01D /* Movie.swift */; };
 		2089C65719C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C65619C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift */; };
 		2089C65919C5159100DEB01D /* RottenTomatoesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C65819C5159100DEB01D /* RottenTomatoesClient.swift */; };
+		2089C65B19C584E500DEB01D /* TopRentalsMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2089C65A19C584E500DEB01D /* TopRentalsMovieTableViewCell.swift */; };
 		20CF5F7219C4011A00B0E05C /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF5F7119C4011A00B0E05C /* BoxOfficeViewController.swift */; };
 		20CF5F7419C4012600B0E05C /* TopRentalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF5F7319C4012600B0E05C /* TopRentalsViewController.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +49,7 @@
 		2089C64F19C43AC300DEB01D /* ios8_rotten_tomatoes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ios8_rotten_tomatoes-Bridging-Header.h"; sourceTree = "<group>"; };
 		2089C65619C4BFA200DEB01D /* BoxOfficeMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxOfficeMovieTableViewCell.swift; sourceTree = "<group>"; };
 		2089C65819C5159100DEB01D /* RottenTomatoesClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RottenTomatoesClient.swift; sourceTree = "<group>"; };
+		2089C65A19C584E500DEB01D /* TopRentalsMovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRentalsMovieTableViewCell.swift; sourceTree = "<group>"; };
 		20CF5F7119C4011A00B0E05C /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 		20CF5F7319C4012600B0E05C /* TopRentalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopRentalsViewController.swift; sourceTree = "<group>"; };
 		7824E268ACFD49089B70CB8B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 		2089C65519C4BF6500DEB01D /* Top Rentals Movie */ = {
 			isa = PBXGroup;
 			children = (
+				2089C65A19C584E500DEB01D /* TopRentalsMovieTableViewCell.swift */,
 			);
 			name = "Top Rentals Movie";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				2089C64819C4112600DEB01D /* MovieViewController.swift in Sources */,
 				2089C64E19C419F900DEB01D /* Movie.swift in Sources */,
 				2089C65919C5159100DEB01D /* RottenTomatoesClient.swift in Sources */,
+				2089C65B19C584E500DEB01D /* TopRentalsMovieTableViewCell.swift in Sources */,
 				2077F44019C2EEFC00689887 /* ViewController.swift in Sources */,
 				2077F43E19C2EEFC00689887 /* AppDelegate.swift in Sources */,
 				20CF5F7219C4011A00B0E05C /* BoxOfficeViewController.swift in Sources */,
