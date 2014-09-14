@@ -12,4 +12,8 @@ class Movie {
     var title = "[title]"
     var synopsis = "[synopsis]"
     var posters = [String: String]()
+    
+    class func parseMovies(response: AnyObject!) {
+        println("Movie - parseMovies")
+    }
 }

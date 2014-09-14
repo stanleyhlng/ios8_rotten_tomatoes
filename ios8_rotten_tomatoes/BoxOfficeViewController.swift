@@ -28,6 +28,18 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: "doRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
+        
+        // configure rotten tomatoes client
+        var client = RottenTomatoesClient()
+        var params = ["limit": "1"]
+        client.boxOfficeWithParams(params,
+            success: { (operation, response) -> Void in
+                println("ok")
+                //println(response)
+            },
+            failure: { (operation, error) -> Void in
+                println("err")
+            })
     }
 
     override func didReceiveMemoryWarning() {
