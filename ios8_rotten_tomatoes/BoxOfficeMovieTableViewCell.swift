@@ -44,7 +44,7 @@ class BoxOfficeMovieTableViewCell: UITableViewCell {
     func setupSynopsis() {
         synopsisLabel.text = movie.synopsis
         synopsisLabel.sizeToFit()
-        println(synopsisLabel.frame.size)
+        //println(synopsisLabel.frame.size)
     }
     
     func setupPoster() {

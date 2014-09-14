@@ -62,13 +62,12 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        println("BoxOfficeViewController - cellForRowAtIndexPath: \(indexPath.row)")
+        //println("BoxOfficeViewController - cellForRowAtIndexPath: \(indexPath.row)")
 
         //let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "")
         let cell = tableView.dequeueReusableCellWithIdentifier("BoxOfficeMovieCell") as BoxOfficeMovieTableViewCell
         cell.movie = movies[indexPath.row] as Movie
         cell.configure()
-        cell.sizeToFit()
         
         return cell
     }

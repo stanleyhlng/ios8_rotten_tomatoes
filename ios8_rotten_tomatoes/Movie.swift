@@ -17,13 +17,15 @@ class Movie: MTLModel, MTLJSONSerializing {
     var title: NSString!
     var synopsis: NSString!
     var posters: [String: String]!
+    var rating: NSString!
     
     class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
         return [
             "id": "id",
             "title": "title",
             "synopsis": "synopsis",
-            "posters": "posters"
+            "posters": "posters",
+            "rating": "mpaa_rating"
         ]
     }
     
