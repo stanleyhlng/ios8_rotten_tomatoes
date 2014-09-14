@@ -47,7 +47,6 @@ class RottenTomatoesClient: AFHTTPRequestOperationManager {
     }
     
     // Get Top Rentals
-    // Top Rentals
     // http://developer.rottentomatoes.com/docs/read/json/v10/Top_Rentals
     // http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=[your_api_key]&limit=1
     func topRentalsWithParams(
@@ -61,6 +60,30 @@ class RottenTomatoesClient: AFHTTPRequestOperationManager {
             dump(p)
             
             return self.GET("http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json",
+                parameters: p,
+                success: {
+                    (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
+                    //println(response)
+                    //println(Movie.parseMovies(response))
+                    success(operation: operation, response: Movie.parseMovies(response))
+                },
+                failure: failure)
+    }
+    
+    // Get Movie Search
+    // http://developer.rottentomatoes.com/docs/read/json/v10/Movies_Search
+    // http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=[your_api_key]&q=Jack&page_limit=1
+    func searchWithParams(
+        params: [String: String]!,
+        success: ((operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void)!,
+        failure: ((operation: AFHTTPRequestOperation!, error: NSError!) -> Void)!) -> AFHTTPRequestOperation {
+            println("topRentals")
+            
+            var p = params;
+            p["apikey"] = getApiKey()
+            dump(p)
+            
+            return self.GET("http://api.rottentomatoes.com/api/public/v1.0/movies.json",
                 parameters: p,
                 success: {
                     (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in

@@ -98,6 +98,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentInset" minX="0.0" minY="44" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell alpha="0.49999999999999961" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BoxOfficeMovieCell" rowHeight="120" id="Rpx-AL-Msh" customClass="BoxOfficeMovieTableViewCell" customModule="ios8_rotten_tomatoes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -155,15 +156,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar hidden="YES" contentMode="redraw" id="9Wl-ok-Zp2">
+                            <searchBar contentMode="redraw" showsCancelButton="YES" id="9Wl-ok-Zp2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="webSearch"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                             </searchBar>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="yIx-8w-28O"/>
                     <connections>
+                        <outlet property="searchBar" destination="9Wl-ok-Zp2" id="3wm-83-Gcj"/>
                         <outlet property="tableView" destination="h0i-mQ-sRW" id="l0Q-7s-6YY"/>
                         <segue destination="gy7-K8-51J" kind="push" identifier="MovieFromBoxOffice" id="Ja9-Wt-Hof"/>
                     </connections>

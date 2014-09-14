@@ -8,9 +8,10 @@
 
 import UIKit
 
-class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var refreshControl = UIRefreshControl()
     var movies: [Movie] = []
@@ -30,6 +31,9 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         refreshControl.addTarget(self, action: "doRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         tableView.addSubview(refreshControl)
+        
+        // setup search bar
+        searchBar.delegate = self
         
         // setup rotten tomatoes client
         var client = RottenTomatoesClient()
@@ -64,6 +68,36 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
             failure: { (operation, error) -> Void in
                 println("err")
         })
+    }
+    
+    func doSearch(sender: AnyObject, terms: String) {
+        println("BoxOfficeViewController - doSearch. terms: \(terms)")
+        var client = RottenTomatoesClient()
+        var params = ["limit": "10", "q": terms]
+        client.searchWithParams(params,
+            success: { (operation, response) -> Void in
+                self.movies = response as [Movie]
+                println("movies.count = \(self.movies.count)")
+                self.tableView.reloadData()
+            },
+            failure: { (operation, error) -> Void in
+                println("err")
+        })
+    }
+    
+    // MARK: - UISearchBarDelegate
+
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        println("BoxOfficeViewController - searchBarSearchButtonClicked")
+        
+        searchBar.resignFirstResponder()
+        doSearch(self, terms: searchBar.text)
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        println("BoxOfficeViewController - searchBarCancelButtonClicked")
+        searchBar.resignFirstResponder()
+        doRefresh(self)
     }
     
     // MARK: - UITableViewDataSource
