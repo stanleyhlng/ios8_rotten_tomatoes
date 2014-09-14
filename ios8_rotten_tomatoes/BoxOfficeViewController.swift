@@ -11,6 +11,7 @@ import UIKit
 class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var refreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +23,21 @@ class BoxOfficeViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.rowHeight = 100
         tableView.dataSource = self
         tableView.delegate = self
+        
+        // configure table view's refresh control
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: "doRefresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func doRefresh(sender: AnyObject) {
+        println("BoxOfficeViewController - doRefresh")
+        refreshControl.endRefreshing()
     }
     
     // MARK: - UITableViewDataSource
