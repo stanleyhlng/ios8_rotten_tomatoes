@@ -4,4 +4,4 @@
 
 #import "AfNetworking.h"
 #import "UIImageView+AFNetworking.h"
-#import "UIImageView+SDWebImage_M13ProgressSuite.h"
+#import <Mantle.h>

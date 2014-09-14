@@ -66,6 +66,18 @@
 #define COCOAPODS_VERSION_MINOR_M13ProgressSuite 2
 #define COCOAPODS_VERSION_PATCH_M13ProgressSuite 5
 
+// Mantle
+#define COCOAPODS_POD_AVAILABLE_Mantle
+#define COCOAPODS_VERSION_MAJOR_Mantle 1
+#define COCOAPODS_VERSION_MINOR_Mantle 5
+#define COCOAPODS_VERSION_PATCH_Mantle 0
+
+// Mantle/extobjc
+#define COCOAPODS_POD_AVAILABLE_Mantle_extobjc
+#define COCOAPODS_VERSION_MAJOR_Mantle_extobjc 1
+#define COCOAPODS_VERSION_MINOR_Mantle_extobjc 5
+#define COCOAPODS_VERSION_PATCH_Mantle_extobjc 0
+
 // Reveal-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Reveal_iOS_SDK
 #define COCOAPODS_VERSION_MAJOR_Reveal_iOS_SDK 1

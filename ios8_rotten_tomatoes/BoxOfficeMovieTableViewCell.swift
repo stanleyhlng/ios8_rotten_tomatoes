@@ -14,6 +14,8 @@ class BoxOfficeMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var synopsisLabel: UILabel!
     
+    var movie: Movie! = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,4 +27,35 @@ class BoxOfficeMovieTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func configure() {
+        if movie == nil {
+            return
+        }
+        setupTitle()
+        setupSynopsis()
+        setupPoster()
+    }
+    
+    func setupTitle() {
+        titleLabel.text = movie.title
+        titleLabel.sizeToFit()
+    }
+    
+    func setupSynopsis() {
+        synopsisLabel.text = movie.synopsis
+        synopsisLabel.sizeToFit()
+        println(synopsisLabel.frame.size)
+    }
+    
+    func setupPoster() {
+        let posters = movie.posters as Dictionary<String, String>
+        let url = NSURL.URLWithString(posters["profile"]!)
+        let imageData: NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)
+        
+        posterImageView.alpha = 0
+        posterImageView.image = UIImage(data: imageData)
+        UIView.animateWithDuration(1.0, animations: { () -> Void in
+            self.posterImageView.alpha = 1
+        })
+    }
 }

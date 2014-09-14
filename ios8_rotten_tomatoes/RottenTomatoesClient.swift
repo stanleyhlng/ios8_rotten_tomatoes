@@ -44,8 +44,8 @@ class RottenTomatoesClient: AFHTTPRequestOperationManager {
             success: {
                 (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                 //println(response)
-                Movie.parseMovies(response)
-                success(operation: operation, response: response)
+                //println(Movie.parseMovies(response))
+                success(operation: operation, response: Movie.parseMovies(response))
             },
             failure: failure)
     }

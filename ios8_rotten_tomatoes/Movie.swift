@@ -8,12 +8,41 @@
 
 import Foundation
 
-class Movie {
-    var title = "[title]"
-    var synopsis = "[synopsis]"
-    var posters = [String: String]()
+class Movie: MTLModel, MTLJSONSerializing {
+    //var title = "[title]"
+    //var synopsis = "[synopsis]"
+    //var posters = [String: String]()
     
-    class func parseMovies(response: AnyObject!) {
-        println("Movie - parseMovies")
+    var id: NSNumber!
+    var title: NSString!
+    var synopsis: NSString!
+    var posters: [String: String]!
+    
+    class func JSONKeyPathsByPropertyKey() -> [NSObject : AnyObject]! {
+        return [
+            "id": "id",
+            "title": "title",
+            "synopsis": "synopsis",
+            "posters": "posters"
+        ]
+    }
+    
+    class func parseMovie(response: [NSObject: AnyObject]!) -> AnyObject {
+        return MTLJSONAdapter.modelOfClass(Movie.self, fromJSONDictionary: response, error: nil)
+    }
+    
+    class func parseMovies(response: AnyObject!) -> [AnyObject] {
+        let responseDict = response as NSDictionary
+        
+        var movies: [Movie] = Array()
+        
+        var items = responseDict["movies"] as [NSDictionary]
+        for item in items {
+            var movie = Movie.parseMovie(item) as Movie
+            //dump(movie)
+            movies.append(movie)
+        }
+        
+        return movies
     }
 }

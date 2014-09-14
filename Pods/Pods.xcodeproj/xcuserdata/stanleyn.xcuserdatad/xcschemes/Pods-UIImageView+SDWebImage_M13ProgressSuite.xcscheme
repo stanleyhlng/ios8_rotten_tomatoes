@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F2902A1B372B4FA188C2470E"
+               BlueprintIdentifier = "1995045AAA744FBD859A91D4"
                BuildableName = "libPods-UIImageView+SDWebImage_M13ProgressSuite.a"
                BlueprintName = "Pods-UIImageView+SDWebImage_M13ProgressSuite"
                ReferencedContainer = "container:Pods.xcodeproj">

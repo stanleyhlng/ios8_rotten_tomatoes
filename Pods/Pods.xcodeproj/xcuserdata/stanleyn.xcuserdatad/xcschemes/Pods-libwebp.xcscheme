@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D68B80FE19743EBB7152552"
+               BlueprintIdentifier = "82F5E70E882343A89525DE8D"
                BuildableName = "libPods-libwebp.a"
                BlueprintName = "Pods-libwebp"
                ReferencedContainer = "container:Pods.xcodeproj">
