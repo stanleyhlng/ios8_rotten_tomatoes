@@ -134,7 +134,7 @@
         <scene sceneID="wJg-Ba-NNJ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="za4-HN-LPw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Movies" id="ZtO-do-wcP"/>
+                    <tabBarItem key="tabBarItem" title="Movies" image="film-48" id="ZtO-do-wcP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mjp-ce-uCm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -223,7 +223,7 @@
         <scene sceneID="WLH-9v-d8p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Me4-mM-q1Y" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="DVDs" id="Q36-75-QPt"/>
+                    <tabBarItem key="tabBarItem" title="DVDs" image="cd-48" id="Q36-75-QPt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GHp-Yl-QfZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -240,6 +240,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cd-48" width="24" height="24"/>
+        <image name="film-48" width="24" height="24"/>
         <image name="movie-image-placeholder" width="60" height="90"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

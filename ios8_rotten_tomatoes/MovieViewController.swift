@@ -47,6 +47,7 @@ class MovieViewController: UIViewController {
             println("contentView.frame.size = \(contentView.frame.size)")
             
             // movie.poster
+            /*
             var posters = [
                 "lo_res": NSURL(string: movie.posters["profile"]!),
                 "hi_res": NSURL(string: movie.posters["original"]!)
@@ -55,11 +56,37 @@ class MovieViewController: UIViewController {
             //posterImageView.setImageWithURLRequest(NSURLRequest(URL: posters["lo_res"]!), placeholderImage: UIImage(named: "movie-image-placeholder"), success: , failure: nil)
             posterImageView.setImageWithURLRequest(NSURLRequest(URL: posters["lo_res"]!), placeholderImage: UIImage(named: "movie-image-placeholder"), success: { (request:NSURLRequest!, response: NSHTTPURLResponse!, image: UIImage!) -> Void in
                 
-                println("success")
-                self.posterImageView.image = image!
+                    println("success")
+                    self.posterImageView.image = image!
+                    
+                    // hi-res
+                    var hiResUrl = (self.movie.posters["original"]! as String).stringByReplacingOccurrencesOfString("_tmb.jpg", withString: "_ori.jpg", options: NSStringCompareOptions.LiteralSearch, range: nil)
+
+                    let url = NSURL.URLWithString(hiResUrl)
+                    let imageData: NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)
+
+                    //self.posterImageView.alpha = 0
+                    self.posterImageView.image = UIImage(data: imageData)
+                    //UIView.animateWithDuration(0.4, animations: { () -> Void in
+                    //    self.posterImageView.alpha = 1
+                    //})
                 
                 }, failure: { (request: NSURLRequest!, response: NSHTTPURLResponse!, error: NSError!) -> Void in
                 println("fail")
+            })
+            */
+            var url = NSURL.URLWithString(self.movie.posters["profile"]!)
+            var imageData: NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)
+            
+            self.posterImageView.alpha = 0
+            self.posterImageView.image = UIImage(data: imageData)
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                self.posterImageView.alpha = 1
+            }, completion: { (Bool) -> Void in
+                var hiResUrl = (self.movie.posters["original"]! as String).stringByReplacingOccurrencesOfString("_tmb.jpg", withString: "_ori.jpg", options: NSStringCompareOptions.LiteralSearch, range: nil)
+                url = NSURL.URLWithString(hiResUrl)
+                imageData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)
+                self.posterImageView.image = UIImage(data: imageData)
             })
         }
 
