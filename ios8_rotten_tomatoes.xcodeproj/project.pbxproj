@@ -110,8 +110,6 @@
 				20CF5F6B19C4003400B0E05C /* Controllers */,
 				2089C64B19C415B800DEB01D /* Models */,
 				2089C65219C4BF3100DEB01D /* UI */,
-				2077F43D19C2EEFC00689887 /* AppDelegate.swift */,
-				2077F43F19C2EEFC00689887 /* ViewController.swift */,
 				2077F44119C2EEFC00689887 /* Main.storyboard */,
 				2077F44419C2EEFC00689887 /* Images.xcassets */,
 				2077F44619C2EEFC00689887 /* LaunchScreen.xib */,
@@ -219,9 +217,19 @@
 			name = "Top Rentals Movie";
 			sourceTree = "<group>";
 		};
+		2089C65C19C5932B00DEB01D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				2077F43D19C2EEFC00689887 /* AppDelegate.swift */,
+				2077F43F19C2EEFC00689887 /* ViewController.swift */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		20CF5F6B19C4003400B0E05C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2089C65C19C5932B00DEB01D /* App */,
 				2089C64619C4111300DEB01D /* Movie */,
 				20CF5F6E19C400F200B0E05C /* Box Office */,
 				20CF5F7019C4010A00B0E05C /* Top Rentals */,

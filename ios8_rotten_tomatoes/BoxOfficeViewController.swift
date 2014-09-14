@@ -36,6 +36,7 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
         searchBar.delegate = self
         
         // setup rotten tomatoes client
+        GSProgressHUD.show()
         var client = RottenTomatoesClient()
         var params = ["limit": "10"]
         client.boxOfficeWithParams(params,
@@ -43,9 +44,11 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
                 self.movies = response as [Movie]
                 println("movies.count = \(self.movies.count)")
                 self.tableView.reloadData()
+                GSProgressHUD.dismiss()
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                GSProgressHUD.dismiss()
         })
     }
     
@@ -67,11 +70,13 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                self.refreshControl.endRefreshing()
         })
     }
     
     func doSearch(sender: AnyObject, terms: String) {
         println("BoxOfficeViewController - doSearch. terms: \(terms)")
+        GSProgressHUD.show()
         var client = RottenTomatoesClient()
         var params = ["limit": "10", "q": terms]
         client.searchWithParams(params,
@@ -79,9 +84,11 @@ class BoxOfficeViewController: UIViewController, UISearchBarDelegate, UITableVie
                 self.movies = response as [Movie]
                 println("movies.count = \(self.movies.count)")
                 self.tableView.reloadData()
+                GSProgressHUD.dismiss()
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                GSProgressHUD.dismiss()
         })
     }
     

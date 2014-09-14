@@ -19,7 +19,7 @@ class MovieViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+  
         // Do any additional setup after loading the view.
         println("MovieViewController - viewDidLoad")
         dump(movie);
@@ -30,7 +30,7 @@ class MovieViewController: UIViewController {
             //navigationItem.title = movie.title
             
             // movie.title
-            titleLabel.text = movie.title
+            titleLabel.text = "》" + movie.title + "．"
             titleLabel.sizeToFit()
             println("titleLabel.frame.size = \(titleLabel.frame.size)")
             
@@ -81,13 +81,23 @@ class MovieViewController: UIViewController {
             self.posterImageView.alpha = 0
             self.posterImageView.image = UIImage(data: imageData)
             UIView.animateWithDuration(1.0, animations: { () -> Void in
+                
                 self.posterImageView.alpha = 1
+
             }, completion: { (Bool) -> Void in
+
+                // Load hi-resolution poster
                 var hiResUrl = (self.movie.posters["original"]! as String).stringByReplacingOccurrencesOfString("_tmb.jpg", withString: "_ori.jpg", options: NSStringCompareOptions.LiteralSearch, range: nil)
                 url = NSURL.URLWithString(hiResUrl)
                 imageData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: nil)
                 self.posterImageView.image = UIImage(data: imageData)
+
             })
+            
+            self.contentView.alpha = 0
+            UIView.animateWithDuration(1.0, delay: 2.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                self.contentView.alpha = 0.8
+            }, completion: nil)
         }
 
         // current screen size

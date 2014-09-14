@@ -32,6 +32,7 @@ class TopRentalsViewController: UIViewController, UITableViewDataSource, UITable
         tableView.addSubview(refreshControl)
         
         // setup rotten tomatoes client
+        GSProgressHUD.show()
         var client = RottenTomatoesClient()
         var params = ["limit": "10"]
         client.topRentalsWithParams(params,
@@ -39,9 +40,11 @@ class TopRentalsViewController: UIViewController, UITableViewDataSource, UITable
                 self.movies = response as [Movie]
                 println("movies.count = \(self.movies.count)")
                 self.tableView.reloadData()
+                GSProgressHUD.dismiss()
             },
             failure: { (operation, error) -> Void in
                 println("err")
+                GSProgressHUD.dismiss()
         })
     }
 
